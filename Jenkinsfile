@@ -2,9 +2,9 @@ pipeline {
     agent any
     environment {
         PROJECT_ID = 'careful-granite-425318-v7'
-        CLUSTER_NAME = '<<Your GKE Cluster Name>>'
-        LOCATION = '<<Your GKE Cluster Location>>'
-        CREDENTIALS_ID = 'multi-k8s'
+        CLUSTER_NAME = 'My First Project '
+        LOCATION = 'us-central1-c'
+        CREDENTIALS_ID = 'a73e5197-8888-419e-8e67-f3ae62d75218'
         DOCKER_USER = "surya8899"
         DOCKER_PASS = 'dockerhub'
     }
