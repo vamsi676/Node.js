@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         PROJECT_ID = 'careful-granite-425318-v7'
-        CLUSTER_NAME = 'My First Project'
+        CLUSTER_NAME = 'cluster-1'
         LOCATION = 'us-central1-c'
         CREDENTIALS_ID = 'a73e5197-8888-419e-8e67-f3ae62d75218'
         DOCKER_USER = "surya8899"
