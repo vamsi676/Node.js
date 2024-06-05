@@ -6,4 +6,30 @@ pipeline {
         LOCATION = '<<Your GKE Cluster Location>>'
         CREDENTIALS_ID = 'multi-k8s'
     }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'master', url: 'https://github.com/vamsi676/Node.js'
+            }
+        }
+
+        stage('Docker Build & Push') {
+            steps {
+                script {
+                    docker.withRegistry('',DOCKER_PASS) {
+                        myimage = docker.build("surya8899/hello:${env.BUILD_ID}")
+                    }
+
+                    docker.withRegistry('',DOCKER_PASS) {
+                        echo "Push Docker Image"
+                        myimage.push("${env.BUILD_ID}")
+                    }
+                }
+            }
+        }
+    }
 }
+
+
+
