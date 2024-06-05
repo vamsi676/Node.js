@@ -5,6 +5,8 @@ pipeline {
         CLUSTER_NAME = '<<Your GKE Cluster Name>>'
         LOCATION = '<<Your GKE Cluster Location>>'
         CREDENTIALS_ID = 'multi-k8s'
+        DOCKER_USER = "surya8899"
+        DOCKER_PASS = 'dockerhub'
     }
 
     stages {
